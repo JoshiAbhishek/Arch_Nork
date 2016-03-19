@@ -1,0 +1,20 @@
+{
+    "name": "arch-nork",
+    "version": "1.0.0",
+    "description": "This repository contains two versions of a simple text-based game called Nork, developed as part of a [course](http://arch-joelross.rhcloud.com/) at the UW iSchool.",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kchen73/arch-nork.git"
+    },
+    "author": "Abhishek Joshi",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/kchen73/arch-nork/issues"
+    },
+    "homepage": "https://github.com/kchen73/arch-nork#readme"
+}

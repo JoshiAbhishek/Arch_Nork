@@ -1,0 +1,79 @@
+{
+    "welcome": "Welcome to Nork!",
+    "description": "Nork is a text-based game where you explore a small virtual world. This world is a house. When in a location, or room, you can use TAKE, USE, and GO followed by another member, as well as INVENTORY. To win, use an item in a room and see if there is the cheeseburger to eat in the kitchen!",
+    "startLocation": "bedroom",
+    "rooms": [
+        {
+            "id": "bedroom",
+            "description": "You have entered the bedroom. The living room is to the north and the bathroom is to the east.",
+            "exits": {
+                "north": {
+                    "id": "living"
+                },
+                "east": {
+                    "id": "bathroom"
+                }
+            }
+        },
+        {
+            "id": "bathroom",
+            "description": "You have entered the bathroom. The bedroom is to the west. A key is hanging from a hook.",
+            "exits": {
+                "west": {
+                    "id": "bedroom"
+                }
+            },
+            "items": [
+                "key"
+            ]
+        },
+        {
+            "id": "living",
+            "description": "You have entered the living room. The bedroom is to the south and the kitchen is to the east. The kitchen door is locked.",
+            "exits": {
+                "south": {
+                    "id": "bedroom"
+                }
+            },
+            "uses": [
+                {
+                    "item": "key",
+                    "description": "You unlock the kitchen door and enter the kitchen.",
+                    "effect": {
+                        "goto": {
+                            "id": "kitchen"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": "kitchen",
+            "description": "You have entered the kitchen. The living room is to the west. A cheeseburger sits on the table.",
+            "exits": {
+                "west": {
+                    "id": "living"
+                }
+            },
+            "items": [
+                "cheeseburger"
+            ],
+            "uses": [
+                {
+                    "item": "cheeseburger",
+                    "description": "You eat the cheeseburger, and you're happy.",
+                    "effect": {
+                        "goto": {
+                            "id": "won"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": "won",
+            "description": "Congratulations, you won!",
+            "status": "won"
+        }
+    ]
+}
